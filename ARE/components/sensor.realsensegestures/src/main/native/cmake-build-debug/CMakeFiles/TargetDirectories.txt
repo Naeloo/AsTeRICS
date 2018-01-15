@@ -1,0 +1,4 @@
+C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir
+C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native-test.dir
+C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/rebuild_cache.dir

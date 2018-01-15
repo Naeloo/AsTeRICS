@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: asterics-sensors.realsensegestures
+Bundle-SymbolicName: eu.asterics.component.sensor.realsensegestures
+Bundle-Version: 0.1.0
+DynamicImport-Package: *

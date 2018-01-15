@@ -1,0 +1,1 @@
+librealsense-gestures-native.dll.a realsense2.dll libopencv_core340.dll libopencv_highgui340.dll libopencv_imgproc340.dll -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

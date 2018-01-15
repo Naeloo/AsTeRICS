@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<componentTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="bundle_model.xsd">
+
+    <componentType id="asterics.RealSenseGestures"
+                   canonical_name="eu.asterics.component.sensor.realsensegestures.RealSenseGesturesInstance">
+        <type subtype="Computer Vision">sensor</type>
+        <singleton>false</singleton>
+        <description>Detects Hand Gestures using a modern Intel RealSense equipped camera</description>
+        <ports>
+
+			<outputPort id="detected">
+				<description>True when Hand is recognized</description>
+				<dataType>boolean</dataType>
+			</outputPort>
+			<outputPort id="fingers_extended">
+				<description>Number of fingers extended (0-5)</description>
+				<dataType>integer</dataType>
+			</outputPort>
+
+        </ports>
+		<events>
+
+			<!--<eventTriggererPort id="gestureLeft">
+				<description>Hand gesture Left detected</description>
+			</eventTriggererPort>
+			<eventTriggererPort id="gestureRight">
+				<description>Hand gesture Right detected</description>
+			</eventTriggererPort>-->
+
+		</events>			
+        <properties>
+			<!--<property name="gestureLeftCertainty"
+				type="integer"
+				value="50"
+				description="Certainty from 0-100 when a left gesture detection should trigger"/>
+			<property name="gestureRightCertainty"
+				type="integer"
+				value="50"
+				description="Certainty from 0-100 when a right gesture detection should trigger"/>-->
+
+        </properties>
+
+    </componentType>
+</componentTypes>
