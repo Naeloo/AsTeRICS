@@ -21,23 +21,8 @@
         </ports>
 		<events>
 
-			<!--<eventTriggererPort id="gestureLeft">
-				<description>Hand gesture Left detected</description>
-			</eventTriggererPort>
-			<eventTriggererPort id="gestureRight">
-				<description>Hand gesture Right detected</description>
-			</eventTriggererPort>-->
-
 		</events>			
         <properties>
-			<!--<property name="gestureLeftCertainty"
-				type="integer"
-				value="50"
-				description="Certainty from 0-100 when a left gesture detection should trigger"/>
-			<property name="gestureRightCertainty"
-				type="integer"
-				value="50"
-				description="Certainty from 0-100 when a right gesture detection should trigger"/>-->
 
         </properties>
 

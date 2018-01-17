@@ -24,7 +24,7 @@ private:
     hand_model* find_defects(cv::Mat);
     void process_hand(hand_model*);
     const int segment_area = 10;
-    const int median_tolerance = 50;
+    const int median_tolerance = 75;
     const int cutoff_distance = 150;
     const int maximum_finger_degrees = 95;
 };

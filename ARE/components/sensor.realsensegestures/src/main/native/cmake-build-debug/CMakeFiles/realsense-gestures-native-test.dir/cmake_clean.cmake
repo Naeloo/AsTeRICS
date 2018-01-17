@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/realsense-gestures-native-test.dir/test/main.cpp.obj"
+  "CMakeFiles/realsense-gestures-native-test.dir/test/main.cpp.o"
   "realsense-gestures-native-test.pdb"
-  "realsense-gestures-native-test.exe"
-  "realsense-gestures-native-test.exe.manifest"
-  "librealsense-gestures-native-test.dll.a"
+  "realsense-gestures-native-test"
 )
 
 # Per-language clean rules from dependency scanning.

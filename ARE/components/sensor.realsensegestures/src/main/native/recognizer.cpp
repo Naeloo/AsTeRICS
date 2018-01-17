@@ -68,7 +68,7 @@ hand_model* recognizer::find_defects(cv::Mat frame) {
         }
     }
     largestContour = contours[largestIndex];
-    approxPolyDP(largestContour, largestContour, 5, true);
+    //approxPolyDP(largestContour, largestContour, 5, true);
 
     vector<int> hull;
     vector<Vec4i> defects;

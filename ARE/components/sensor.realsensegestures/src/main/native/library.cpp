@@ -39,6 +39,7 @@ void loop(JNIEnv* env) {
 
     // Declare depth colorizer for pretty visualization of depth data
     rs2::colorizer color_map;
+    // Use color scheme option 2 (grayscale, distant black, close white)
     color_map.set_option(RS2_OPTION_COLOR_SCHEME, 2);
 
     // Declare RealSense pipeline, encapsulating the actual device and sensors
@@ -50,7 +51,8 @@ void loop(JNIEnv* env) {
     int previousFingers = 0;
 
     using namespace cv;
-    while (gesture_visualizer.is_open() && isRecognizing)
+    std::cout << "Using OpenCV version " + std::to_string(CV_MAJOR_VERSION) << std::endl;
+    while (waitKey(1) && gesture_visualizer.is_open() && isRecognizing)
     {
         rs2::frameset data = pipe.wait_for_frames(); // Wait for next set of frames from the camera
         rs2::frame depth = color_map(data.get_depth_frame());
@@ -72,7 +74,7 @@ void loop(JNIEnv* env) {
             env->CallVoidMethod(theclass, themethod, recognized_model->num_fingers);
             previousFingers = recognized_model->num_fingers;
         }
-
+        //std::cout<<"Loop di loop"<<std::endl;
         gesture_visualizer.display_data(recognized_model->display_frame, recognized_model);
 
         // i have come here to chew bubblegum and garbage collect

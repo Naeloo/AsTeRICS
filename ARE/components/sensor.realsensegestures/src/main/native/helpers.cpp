@@ -49,6 +49,6 @@ double math_helpers::angle_radians(cv::Point p1, cv::Point p2) {
     double magnitB = sqrt(pow(p1.x, 2) + pow(p2.y, 2));
 
     double agl = acos(dot / (magnitA * magnitB));
-    std::cout << std::to_string(agl) << std::endl;
+    //std::cout << std::to_string(agl) << std::endl;
     return agl;
 }

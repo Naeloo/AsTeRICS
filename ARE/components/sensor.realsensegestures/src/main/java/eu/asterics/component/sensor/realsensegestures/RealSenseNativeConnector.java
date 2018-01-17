@@ -13,9 +13,16 @@ public class RealSenseNativeConnector {
     private int currentFingerNo = 0;
     private IRuntimeOutputPort finger_port;
 
+    static String[] native_libs =
+            {"opencv_core", "opencv_highgui", "opencv_imgcodecs", "opencv_imgproc", "realsense-gestures-native"};
+
     public RealSenseNativeConnector(IRuntimeOutputPort finger_port){
-        // Maybe put a nice painting in here so it's not so empty
+        // Assign the finger output port
         this.finger_port = finger_port;
+        // Load native libs
+        for(String lib : native_libs){
+            System.loadLibrary(lib);
+        }
     }
 
     // Callback called from C++ code when extended finger numbers change

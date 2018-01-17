@@ -8,5 +8,6 @@
 int main()
 {
     std::cout << "Hello RealSense" << std::endl;
+    loop(nullptr);
     return 0;
 }

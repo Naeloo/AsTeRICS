@@ -98,6 +98,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
      */
     public IRuntimeOutputPort getOutputPort(String portID)
 	{
+
 		if ("detected".equalsIgnoreCase(portID))
 		{
 			return opDetected;
@@ -199,7 +200,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void start()
       {
           super.start();
-
+          native_conn.start_recognition();
       }
 
      /**
@@ -209,6 +210,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void pause()
       {
           super.pause();
+          native_conn.stop_recognition();
       }
 
      /**
@@ -218,6 +220,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void resume()
       {
           super.resume();
+          native_conn.start_recognition();
       }
 
      /**
@@ -226,7 +229,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       @Override
       public void stop()
       {
-
           super.stop();
+          native_conn.stop_recognition();
       }
 }
