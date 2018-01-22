@@ -78,7 +78,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
         opDetected.sendData(ConversionUtils.booleanToBytes(true));
         opExtended.sendData(ConversionUtils.intToBytes(0));
         // initialize the native connector
-        native_conn = new RealSenseNativeConnector(opExtended);
+        native_conn = new RealSenseNativeConnector(this);
     }
 
    /**prett
@@ -102,8 +102,9 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
 		if ("detected".equalsIgnoreCase(portID))
 		{
 			return opDetected;
-		}else if ("fingers_detected".equalsIgnoreCase(portID))
+		}else if ("fingers_extended".equalsIgnoreCase(portID))
         {
+            System.out.println("[RealSenseGesture] Fingers extended port requested");
             return opExtended;
         }
 

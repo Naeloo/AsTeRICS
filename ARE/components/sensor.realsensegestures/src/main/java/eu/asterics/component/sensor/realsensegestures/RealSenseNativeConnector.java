@@ -2,6 +2,10 @@ package eu.asterics.component.sensor.realsensegestures;
 
 import eu.asterics.mw.data.ConversionUtils;
 import eu.asterics.mw.model.runtime.IRuntimeOutputPort;
+import eu.asterics.mw.model.runtime.impl.DefaultRuntimeInputPort;
+import eu.asterics.mw.services.AstericsModelExecutionThreadPool;
+import eu.asterics.mw.services.AstericsThreadPool;
+import sun.misc.ThreadGroupUtils;
 
 import java.nio.ByteBuffer;
 import java.util.Calendar;
@@ -12,7 +16,7 @@ import java.util.Calendar;
 public class RealSenseNativeConnector {
     //private Calendar lastUpdated = Calendar.getInstance();
     //private int currentFingerNo = 0;
-    private IRuntimeOutputPort finger_port;
+    private RealSenseGesturesInstance parent;
     private boolean transmitting = true;
 
     private RealSenseNativeConnectorThread work_thread;
@@ -20,9 +24,9 @@ public class RealSenseNativeConnector {
     static String[] native_libs =
             {"opencv_core", "opencv_imgproc", "opencv_imgcodecs", "opencv_highgui", "realsense2", "realsense-gestures-native"};
 
-    public RealSenseNativeConnector(IRuntimeOutputPort finger_port){
+    public RealSenseNativeConnector(RealSenseGesturesInstance parent){
         // Assign the finger output port
-        this.finger_port = finger_port;
+        this.parent = parent;
         // Load native libs
         for(String lib : native_libs){
             System.out.println("[RealSenseGestures] Load library " + lib);
@@ -33,21 +37,22 @@ public class RealSenseNativeConnector {
 
     // Callback called from C++ code when extended finger numbers change
     public void fingerNumberChanged(int fingersExtended){
-        System.out.println("[RealSenseGestures] FINGERS: " + fingersExtended);
         if(transmitting) {
-            this.finger_port.sendData(ConversionUtils.intToBytes(fingersExtended));
+            AstericsModelExecutionThreadPool.instance.execute(new PassFingersRunnable(fingersExtended));
         }
     }
 
     // Public methods for doing stuff
     public void startRecognitionThread() {
+        startRecognitionThread(0);
+    }
+
+    private void startRecognitionThread(int delay) {
         System.out.println("[RealSenseGestures] Starting recognition loop thread");
         // create a new work thread because if it has been aborted before we can't start it again
-        work_thread = new RealSenseNativeConnectorThread(this);
+        work_thread = new RealSenseNativeConnectorThread(this, delay);
         // start the recognition loop in the thread
-        //start_visualization();
-        work_thread.start();
-
+        AstericsThreadPool.getInstance().execute(work_thread);
     }
 
     public void stopRecognitionThread() {
@@ -68,8 +73,7 @@ public class RealSenseNativeConnector {
 
     public void recognitionThreadExited() {
         System.out.println("[RealSenseGestures] Recognition loop thread exited unexpectedly - attempting restart in 2 seconds");
-        work_thread = new RealSenseNativeConnectorThread(this, 2000);
-        work_thread.start();
+        startRecognitionThread(2000);
     }
 
     // Native methods for recognition control
@@ -79,4 +83,16 @@ public class RealSenseNativeConnector {
 
     public native void start_visualization();
     public native void stop_visualization();
+
+    public class PassFingersRunnable implements Runnable {
+        int extended;
+        public PassFingersRunnable(int fingers_extended) {
+            this.extended = fingers_extended;
+        }
+
+        @Override
+        public void run() {
+            parent.opExtended.sendData(ConversionUtils.intToBytes(extended));
+        }
+    }
 }
