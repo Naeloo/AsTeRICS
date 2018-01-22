@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="C:\Users\leonh\Desktop\FH\ATPL\bsa4-atlab-project-C2-gr2\asterics-solution\custom\bin\ARE\models\RealSenseGesturesTest.acs_2018_1_17_17_32" version="20130320">
+<model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" modelName="C:\Users\Leonhard\Documents\fh\Bachelorarbeit_1718\IRiS-for-AsTeRICS\bin\ARE\models\RealSenseGesturesTest.acs_2018_1_22_2_1" version="20130320">
   <components>
     <component id="TextDisplay.1" type_id="asterics.TextDisplay">
       <description>GUI component, which displays text.</description>
@@ -10,15 +10,15 @@
       </ports>
       <properties>
         <property name="caption" value="Text Display" />
-        <property name="default" value="" />
+        <property name="default" value="-" />
         <property name="textPosition" value="1" />
         <property name="textColor" value="0" />
         <property name="backgroundColor" value="11" />
-        <property name="displayGUI" value="true" />
+        <property name="displayGUI" value="True" />
       </properties>
       <layout>
-        <posX>248</posX>
-        <posY>71</posY>
+        <posX>362</posX>
+        <posY>126</posY>
       </layout>
       <gui>
         <posX>0</posX>
@@ -39,8 +39,26 @@
       </ports>
       <properties />
       <layout>
-        <posX>43</posX>
-        <posY>67</posY>
+        <posX>60</posX>
+        <posY>110</posY>
+      </layout>
+    </component>
+    <component id="IntToString.1" type_id="asterics.IntToString">
+      <description>Converts int to string</description>
+      <ports>
+        <inputPort portTypeID="input">
+          <properties />
+        </inputPort>
+        <outputPort portTypeID="output">
+          <properties />
+        </outputPort>
+      </ports>
+      <properties>
+        <property name="hexadecimalOutput" value="false" />
+      </properties>
+      <layout>
+        <posX>208</posX>
+        <posY>122</posY>
       </layout>
     </component>
   </components>
@@ -48,7 +66,17 @@
     <channel id="binding.0">
       <source>
         <component id="RealSenseGestures.1" />
-        <port id="fingers_extended" />
+        <port id="detected" />
+      </source>
+      <target>
+        <component id="IntToString.1" />
+        <port id="input" />
+      </target>
+    </channel>
+    <channel id="binding.1">
+      <source>
+        <component id="IntToString.1" />
+        <port id="output" />
       </source>
       <target>
         <component id="TextDisplay.1" />
