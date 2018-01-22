@@ -1,0 +1,1 @@
+librealsense-gestures-native.dll.a ../../resources/lib/native/windows/x86-64/realsense2.dll ../../resources/lib/native/windows/x86-64/opencv_core.dll ../../resources/lib/native/windows/x86-64/opencv_highgui.dll ../../resources/lib/native/windows/x86-64/opencv_imgproc.dll -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,5 +1,5 @@
-/home/leonhard/Applications/CLion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native
-LINKING LINUX LIBRARIES
+"C:\Program Files\JetBrains\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Leonhard\Documents\fh\Bachelorarbeit_1718\IRiS-for-AsTeRICS\ARE\components\sensor.realsensegestures\src\main\native
+LINKING WINDOWS DLLS
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug
+-- Build files have been written to: C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug

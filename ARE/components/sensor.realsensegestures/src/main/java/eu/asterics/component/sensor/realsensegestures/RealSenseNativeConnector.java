@@ -12,15 +12,17 @@ public class RealSenseNativeConnector {
     private Calendar lastUpdated = Calendar.getInstance();
     private int currentFingerNo = 0;
     private IRuntimeOutputPort finger_port;
+    String x = "";
 
     static String[] native_libs =
-            {"opencv_core", "opencv_highgui", "opencv_imgcodecs", "opencv_imgproc", "realsense-gestures-native"};
+            {"opencv_core", "opencv_imgproc", "opencv_imgcodecs", "opencv_highgui", "realsense2", "realsense-gestures-native"};
 
     public RealSenseNativeConnector(IRuntimeOutputPort finger_port){
         // Assign the finger output port
         this.finger_port = finger_port;
         // Load native libs
         for(String lib : native_libs){
+            System.out.println("Load library " + lib);
             System.loadLibrary(lib);
         }
     }

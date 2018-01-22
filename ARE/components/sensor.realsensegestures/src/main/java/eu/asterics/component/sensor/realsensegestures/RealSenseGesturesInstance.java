@@ -75,8 +75,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
     public RealSenseGesturesInstance()
     {
         opDetected.sendData(new byte[]{1});
-        // load the native libraries
-        System.loadLibrary("realsense-gestures-native");
+
         // initialize the native connector
         native_conn = new RealSenseNativeConnector(opExtended);
     }

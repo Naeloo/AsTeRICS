@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -10,19 +10,19 @@
 jni.h
 -
 
-/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/test/main.cpp
-iostream
--
-library.h
--
-
-/usr/lib/jvm/java-8-oracle/include/jni.h
+C:/Program Files/Java/jdk1.8.0_121/include/jni.h
 stdio.h
 -
 stdarg.h
 -
 jni_md.h
-/usr/lib/jvm/java-8-oracle/include/jni_md.h
+C:/Program Files/Java/jdk1.8.0_121/include/jni_md.h
 
-/usr/lib/jvm/java-8-oracle/include/linux/jni_md.h
+C:/Program Files/Java/jdk1.8.0_121/include/win32/jni_md.h
+
+C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/test/main.cpp
+iostream
+-
+library.h
+-
 

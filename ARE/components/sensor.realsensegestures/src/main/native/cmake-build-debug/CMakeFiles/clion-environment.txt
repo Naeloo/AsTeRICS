@@ -1,1 +1,4 @@
-CMake: 3.6.3@/home/leonhard/Applications/CLion/bin/cmake/bin/cmake
+ToolSet: w64 3.3@C:\MinGW64
+Options: 
+
+Options:
