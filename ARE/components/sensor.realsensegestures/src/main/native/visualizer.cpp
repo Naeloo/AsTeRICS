@@ -3,6 +3,7 @@
 //
 
 #include <helpers.h>
+#include <jni.h>
 #include "visualizer.h"
 
 using namespace cv;
@@ -10,8 +11,21 @@ using namespace cv;
 visualizer::visualizer(char* _window_name) {
     window_name = _window_name;
     namedWindow(window_name, WINDOW_AUTOSIZE);
-
+    //waitKey(0);
+    //window_thread = new std::thread(&visualizer::window_loop, this);
 }
+
+/*void visualizer::window_loop() {
+
+    namedWindow(window_name, WINDOW_AUTOSIZE);
+    while(waitKey(1)){
+        // Iterate through pending frames
+        for(std::vector<cv::Mat>::iterator it = pending_frames.begin(); it != pending_frames.end(); ++it) {
+            // Display pending frame
+            imshow(window_name, *it);
+        }
+    }
+}*/
 
 void visualizer::display_data(Mat img, hand_model* model) {
     // Get size of image
@@ -42,8 +56,10 @@ void visualizer::display_data(Mat img, hand_model* model) {
         }
 
     }
-    // Show new image
+    // Add image to pending queue
+    //pending_frames.push_back(img);
     imshow(window_name, img);
+    //waitKey(0);
 }
 
 bool visualizer::is_open() {

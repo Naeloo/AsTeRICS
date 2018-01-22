@@ -7,10 +7,15 @@
 
 #include <opencv2/opencv.hpp>
 #include "recognizer.h"
+#include <thread>
 
 class visualizer {
 private:
     char *window_name;
+    //std::thread* window_thread;
+    //std::vector<cv::Mat> pending_frames;
+
+    //void window_loop();
 public:
     visualizer(char*);
     void display_data(cv::Mat, hand_model*);

@@ -3,7 +3,7 @@
 
 #include <jni.h>
 
-void loop(JNIEnv*);
+void loop(JNIEnv*, jobject, bool);
 //void loop();
 
 #endif

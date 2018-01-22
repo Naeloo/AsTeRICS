@@ -8,34 +8,50 @@
 #include "eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector.h"
 
 bool isRecognizing = false;
+visualizer* gesture_visualizer = nullptr;
 
+// RECOGNITION
+// TODO: Eventually split these JNI connections into a seperate cpp
 // Native method to START RECOGNITION
 JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_start_1recognition
-        (JNIEnv * env, jobject){
+        (JNIEnv * env, jobject nativeConnector){
     // Start the loop
-    loop(env);
+    loop(env, nativeConnector, false);
 }
 // Native method to PAUSE RECOGNITION
 JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_pause_1recognition
-        (JNIEnv * env, jobject){
+        (JNIEnv * env, jobject nativeConnector){
     // Stop the loop
     isRecognizing = false;
 }
 // Native method to STOP RECOGNITION
 JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_stop_1recognition
-        (JNIEnv * env, jobject){
+        (JNIEnv * env, jobject nativeConnector){
     // Stop the loop
     isRecognizing = false;
 }
 
-void loop() {
-    loop(nullptr);
-}
-void loop(JNIEnv* env) {
-    visualizer gesture_visualizer("Gesture Recognition");
-    recognizer gesture_recognizer;
+// VISUALIZATION
+// TODO: Find some way of visualization that works with JNI
 
+JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_start_1visualization
+        (JNIEnv *, jobject){
+    //gesture_visualizer = new visualizer((char *) "Gesture Recognition");
+}
+
+JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_stop_1visualization
+        (JNIEnv *, jobject){
+    //
+}
+
+void loop(JNIEnv* env, jobject nativeConnector, bool use_visualizer) {
+    //visualizer gesture_visualizer((char *) "Gesture Recognition");
+    recognizer gesture_recognizer;
     hand_model* recognized_model;
+
+    if(use_visualizer){
+        gesture_visualizer = new visualizer((char*)"Gesture Recognition");
+    }
 
     // Declare depth colorizer for pretty visualization of depth data
     rs2::colorizer color_map;
@@ -50,10 +66,19 @@ void loop(JNIEnv* env) {
     isRecognizing = true;
     int previousFingers = 0;
 
+    // JNI interfacing
+    //jclass nativeConnectorClass = env->FindClass("eu/asterics/component/sensor/realsensegestures/RealSenseNativeConnector");
+    jmethodID fingerCallback;
+    if(env != nullptr){
+        fingerCallback = env->GetMethodID(env->GetObjectClass(nativeConnector),  "fingerNumberChanged", "(I)V");
+    }
+
+
     using namespace cv;
     std::cout << "Using OpenCV version " + std::to_string(CV_MAJOR_VERSION) << std::endl;
-    while (waitKey(1) && gesture_visualizer.is_open() && isRecognizing)
+    while ( isRecognizing)
     {
+        if(use_visualizer) { waitKey(1); }
         rs2::frameset data = pipe.wait_for_frames(); // Wait for next set of frames from the camera
         rs2::frame depth = color_map(data.get_depth_frame());
         //rs2::frame depth = data.get_depth_frame();
@@ -68,18 +93,20 @@ void loop(JNIEnv* env) {
         recognized_model = gesture_recognizer.get_hand_model(image);
 
         if(env != nullptr && previousFingers != recognized_model->num_fingers){
-            // TODO: Should probably move this so the class / method is only loaded once
-            jclass theclass = env->FindClass("eu/asterics/component/sensor/realsensegestures");
-            jmethodID themethod = env->GetMethodID(theclass, "fingerNumberChanged", "(I)V");
-            env->CallVoidMethod(theclass, themethod, recognized_model->num_fingers);
+            env->CallVoidMethod(nativeConnector, fingerCallback, recognized_model->num_fingers);
             previousFingers = recognized_model->num_fingers;
         }
-        //std::cout<<"Loop di loop"<<std::endl;
-        gesture_visualizer.display_data(recognized_model->display_frame, recognized_model);
+        // If the visualizer exists, display frame
+        if(gesture_visualizer != nullptr) {
+            gesture_visualizer->display_data(recognized_model->display_frame, recognized_model);
+        }
+
 
         // i have come here to chew bubblegum and garbage collect
         // and I'm all out of gum
         delete recognized_model;
     }
+    delete gesture_visualizer;
+
 }
 

@@ -74,8 +74,9 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
     */
     public RealSenseGesturesInstance()
     {
-        opDetected.sendData(new byte[]{1});
-
+        //opDetected.sendData(new byte[]{1});
+        opDetected.sendData(ConversionUtils.booleanToBytes(true));
+        opExtended.sendData(ConversionUtils.intToBytes(0));
         // initialize the native connector
         native_conn = new RealSenseNativeConnector(opExtended);
     }
@@ -199,7 +200,8 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void start()
       {
           super.start();
-          native_conn.start_recognition();
+          System.out.println("Starting gesture tracking");
+          native_conn.startRecognitionThread();
       }
 
      /**
@@ -209,7 +211,8 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void pause()
       {
           super.pause();
-          native_conn.stop_recognition();
+          System.out.println("Stopping gesture tracking");
+          native_conn.stopRecognitionThread();
       }
 
      /**
@@ -219,7 +222,8 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void resume()
       {
           super.resume();
-          native_conn.start_recognition();
+          System.out.println("Starting gesture tracking");
+          native_conn.pauseRecognitionThread();
       }
 
      /**
@@ -229,6 +233,7 @@ public class RealSenseGesturesInstance extends AbstractRuntimeComponentInstance
       public void stop()
       {
           super.stop();
-          native_conn.stop_recognition();
+          System.out.println("Stopping gesture tracking");
+          native_conn.resumeRecognitionThread();
       }
 }

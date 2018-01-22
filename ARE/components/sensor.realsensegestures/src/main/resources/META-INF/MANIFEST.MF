@@ -19,11 +19,11 @@ Bundle-NativeCode: lib/native/windows/x86-64/realsense2.dll;
  lib/native/windows/x86/opencv_highgui.dll;
  lib/native/windows/x86/realsense-gestures-native.dll;
  osname=win32;processor=x86,
- lib/native/linux/x86-64/realsense2.so;
- lib/native/linux/x86-64/opencv_core.so;
- lib/native/linux/x86-64/opencv_highgui.so;
- lib/native/linux/x86-64/opencv_imgcodecs.so;
- lib/native/linux/x86-64/opencv_imgproc.so;
- lib/native/linux/x86-64/realsense-gestures-native.so;
+ lib/native/linux/x86-64/librealsense2.so;
+ lib/native/linux/x86-64/libopencv_core.so;
+ lib/native/linux/x86-64/libopencv_highgui.so;
+ lib/native/linux/x86-64/libopencv_imgcodecs.so;
+ lib/native/linux/x86-64/libopencv_imgproc.so;
+ lib/native/linux/x86-64/librealsense-gestures-native.so;
  osname=linux;processor=x86-64
 DynamicImport-Package: *

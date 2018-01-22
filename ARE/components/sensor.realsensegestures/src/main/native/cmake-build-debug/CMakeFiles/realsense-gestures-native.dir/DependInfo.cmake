@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/helpers.cpp" "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/helpers.cpp.obj"
-  "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/library.cpp" "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/library.cpp.obj"
-  "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/recognizer.cpp" "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/recognizer.cpp.obj"
-  "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/visualizer.cpp" "C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/visualizer.cpp.obj"
+  "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/helpers.cpp" "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/helpers.cpp.o"
+  "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/library.cpp" "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/library.cpp.o"
+  "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/recognizer.cpp" "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/recognizer.cpp.o"
+  "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/visualizer.cpp" "/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/CMakeFiles/realsense-gestures-native.dir/visualizer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "C:/Program Files/Java/jdk1.8.0_121/include/win32"
+  "/usr/lib/jvm/java-8-oracle/include/linux"
   "../include"
-  "C:/MinGWLibs/librealsense/include"
-  "C:/MinGWLibs/opencv-3.4.0/build/install/include"
-  "C:/Program Files/Java/jdk1.8.0_121/include"
+  "/home/leonhard/Documents/fh/ba/librealsense_new/include"
+  "/usr/include/opencv2"
+  "/usr/lib/jvm/java-8-oracle/include"
   )
 
 # Targets to which this target links.
