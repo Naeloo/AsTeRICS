@@ -8,179 +8,192 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="realsense-gestures-native-test">
-				<Option output="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/realsense-gestures-native-test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include/linux"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/librealsense_new/include"/>
-					<Add directory="/usr/include/opencv2"/>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native-test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="realsense-gestures-native-test/fast">
-				<Option output="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/realsense-gestures-native-test" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include/linux"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/librealsense_new/include"/>
-					<Add directory="/usr/include/opencv2"/>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native-test/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="realsense-gestures-native">
-				<Option output="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/librealsense-gestures-native.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option output="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/librealsense-gestures-native.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include/linux"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/librealsense_new/include"/>
-					<Add directory="/usr/include/opencv2"/>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include/win32"/>
+					<Add directory="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
+					<Add directory="C:/MinGWLibs/librealsense/include"/>
+					<Add directory="C:/MinGWLibs/opencv-3.4.0/build/install/include"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="realsense-gestures-native/fast">
-				<Option output="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/librealsense-gestures-native.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option output="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/librealsense-gestures-native.dll" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include/linux"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
-					<Add directory="/home/leonhard/Documents/fh/ba/librealsense_new/include"/>
-					<Add directory="/usr/include/opencv2"/>
-					<Add directory="/usr/lib/jvm/java-8-oracle/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include/win32"/>
+					<Add directory="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
+					<Add directory="C:/MinGWLibs/librealsense/include"/>
+					<Add directory="C:/MinGWLibs/opencv-3.4.0/build/install/include"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="realsense-gestures-native-test">
+				<Option output="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/realsense-gestures-native-test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include/win32"/>
+					<Add directory="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
+					<Add directory="C:/MinGWLibs/librealsense/include"/>
+					<Add directory="C:/MinGWLibs/opencv-3.4.0/build/install/include"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native-test"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="realsense-gestures-native-test/fast">
+				<Option output="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/realsense-gestures-native-test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include/win32"/>
+					<Add directory="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include"/>
+					<Add directory="C:/MinGWLibs/librealsense/include"/>
+					<Add directory="C:/MinGWLibs/opencv-3.4.0/build/install/include"/>
+					<Add directory="C:/Program Files/Java/jdk1.8.0_121/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 realsense-gestures-native-test/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/helpers.cpp">
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/helpers.cpp">
 			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector.h">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/helpers.h">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/library.h">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/recognizer.h">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/visualizer.h">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/library.cpp">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/recognizer.cpp">
-			<Option target="realsense-gestures-native"/>
-		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/test/main.cpp">
 			<Option target="realsense-gestures-native-test"/>
 		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/visualizer.cpp">
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector.h">
 			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
 		</Unit>
-		<Unit filename="/home/leonhard/Documents/fh/ba/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/CMakeLists.txt">
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/helpers.h">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/jni_methods.h">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/library.h">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/recognizer.h">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/include/visualizer.h">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/jni_methods.cpp">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/library.cpp">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/recognizer.cpp">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/test/main.cpp">
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/visualizer.cpp">
+			<Option target="realsense-gestures-native"/>
+			<Option target="realsense-gestures-native-test"/>
+		</Unit>
+		<Unit filename="C:/Users/Leonhard/Documents/fh/Bachelorarbeit_1718/IRiS-for-AsTeRICS/ARE/components/sensor.realsensegestures/src/main/native/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

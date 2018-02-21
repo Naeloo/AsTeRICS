@@ -1,50 +1,14 @@
 #include "library.h"
 
-#include <iostream>
-#include <librealsense2/rs.hpp>
-#include <opencv2/opencv.hpp>
-
-#include "visualizer.h"
-#include "eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector.h"
-
 bool isRecognizing = false;
 visualizer* gesture_visualizer = nullptr;
 
-// RECOGNITION
-// TODO: Eventually split these JNI connections into a seperate cpp
-// Native method to START RECOGNITION
-JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_start_1recognition
-        (JNIEnv * env, jobject nativeConnector){
-    // Start the loop
-    loop(env, nativeConnector, false);
-}
-// Native method to PAUSE RECOGNITION
-JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_pause_1recognition
-        (JNIEnv * env, jobject nativeConnector){
-    // Stop the loop
-    isRecognizing = false;
-}
-// Native method to STOP RECOGNITION
-JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_stop_1recognition
-        (JNIEnv * env, jobject nativeConnector){
-    // Stop the loop
-    isRecognizing = false;
+void set_recognizing(bool recog) {
+    isRecognizing = recog;
 }
 
-// VISUALIZATION
-// TODO: Find some way of visualization that works with JNI
-
-JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_start_1visualization
-        (JNIEnv *, jobject){
-    //gesture_visualizer = new visualizer((char *) "Gesture Recognition");
-}
-
-JNIEXPORT void JNICALL Java_eu_asterics_component_sensor_realsensegestures_RealSenseNativeConnector_stop_1visualization
-        (JNIEnv *, jobject){
-    //
-}
-
-void loop(JNIEnv* env, jobject nativeConnector, bool use_visualizer) {
+void loop() { loop( false); }
+void loop(bool use_visualizer) {
     //visualizer gesture_visualizer((char *) "Gesture Recognition");
     recognizer gesture_recognizer;
     hand_model* recognized_model;
@@ -66,14 +30,6 @@ void loop(JNIEnv* env, jobject nativeConnector, bool use_visualizer) {
     isRecognizing = true;
     int previousFingers = 0;
 
-    // JNI interfacing
-    //jclass nativeConnectorClass = env->FindClass("eu/asterics/component/sensor/realsensegestures/RealSenseNativeConnector");
-    jmethodID fingerCallback;
-    if(env != nullptr){
-        fingerCallback = env->GetMethodID(env->GetObjectClass(nativeConnector),  "fingerNumberChanged", "(I)V");
-    }
-
-
     using namespace cv;
     std::cout << "Using OpenCV version " + std::to_string(CV_MAJOR_VERSION) << std::endl;
     while ( isRecognizing)
@@ -92,11 +48,14 @@ void loop(JNIEnv* env, jobject nativeConnector, bool use_visualizer) {
 
         recognized_model = gesture_recognizer.get_hand_model(image);
 
-        if(env != nullptr && previousFingers != recognized_model->num_fingers){
-            env->CallVoidMethod(nativeConnector, fingerCallback, recognized_model->num_fingers);
+        #ifdef INCLUDE_JNI
+        if(previousFingers != recognized_model->num_fingers){
+            report_fingers(recognized_model->num_fingers);
             previousFingers = recognized_model->num_fingers;
         }
+        #endif
         // If the visualizer exists, display frame
+
         if(gesture_visualizer != nullptr) {
             gesture_visualizer->display_data(recognized_model->display_frame, recognized_model);
         }

@@ -3,16 +3,18 @@ Bundle-ManifestVersion: 2
 Bundle-Name: asterics-sensors.realsensegestures
 Bundle-SymbolicName: eu.asterics.component.sensor.realsensegestures
 Bundle-Version: 0.1.0
-Bundle-NativeCode: lib/native/windows/x86-64/realsense2.dll;
- lib/native/windows/x86-64/opencv_ffmpeg_64.dll;
+Bundle-NativeCode: lib/native/windows/x86-64/gccsdw.dll;
+ lib/native/windows/x86-64/stdcpp.dll;
+ lib/native/windows/x86-64/realsense2.dll;
  lib/native/windows/x86-64/opencv_core.dll;
  lib/native/windows/x86-64/opencv_imgproc.dll;
  lib/native/windows/x86-64/opencv_imgcodecs.dll;
  lib/native/windows/x86-64/opencv_highgui.dll;
  lib/native/windows/x86-64/realsense-gestures-native.dll;
- osname=win32;processor=x86-64,
+ osname=win32;processor=x86_64,
+ lib/native/windows/x86/gccsdw.dll;
+ lib/native/windows/x86/stdcpp.dll;
  lib/native/windows/x86/realsense2.dll;
- lib/native/windows/x86/opencv_ffmpeg_64.dll;
  lib/native/windows/x86/opencv_core.dll;
  lib/native/windows/x86/opencv_imgproc.dll;
  lib/native/windows/x86/opencv_imgcodecs.dll;
@@ -25,5 +27,5 @@ Bundle-NativeCode: lib/native/windows/x86-64/realsense2.dll;
  lib/native/linux/x86-64/libopencv_imgcodecs.so;
  lib/native/linux/x86-64/libopencv_imgproc.so;
  lib/native/linux/x86-64/librealsense-gestures-native.so;
- osname=linux;processor=x86-64
+ osname=linux;processor=x86_64
 DynamicImport-Package: *
