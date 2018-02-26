@@ -22,7 +22,7 @@ public class RealSenseNativeConnector {
     private RealSenseNativeConnectorThread work_thread;
 
     static String[] native_libs =
-            {"gccsdw", "stdcpp", "opencv_core", "opencv_imgproc", "opencv_imgcodecs", "opencv_highgui", "realsense2", "realsense-gestures-native"};
+            {"libgcc_s_seh-1", "libstdc++-6", "libopencv_core340", "libopencv_imgproc340", "libopencv_imgcodecs340", "libopencv_highgui340", "realsense2", "realsense-gestures-native"};
 
     public RealSenseNativeConnector(RealSenseGesturesInstance parent){
         // Assign the finger output port

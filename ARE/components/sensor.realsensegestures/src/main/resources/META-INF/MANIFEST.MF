@@ -3,13 +3,13 @@ Bundle-ManifestVersion: 2
 Bundle-Name: asterics-sensors.realsensegestures
 Bundle-SymbolicName: eu.asterics.component.sensor.realsensegestures
 Bundle-Version: 0.1.0
-Bundle-NativeCode: lib/native/windows/x86-64/gccsdw.dll;
- lib/native/windows/x86-64/stdcpp.dll;
+Bundle-NativeCode: lib/native/windows/x86-64/libgcc_s_seh-1.dll;
+ lib/native/windows/x86-64/libstdc++-6.dll;
  lib/native/windows/x86-64/realsense2.dll;
- lib/native/windows/x86-64/opencv_core.dll;
- lib/native/windows/x86-64/opencv_imgproc.dll;
- lib/native/windows/x86-64/opencv_imgcodecs.dll;
- lib/native/windows/x86-64/opencv_highgui.dll;
+ lib/native/windows/x86-64/libopencv_core340.dll;
+ lib/native/windows/x86-64/libopencv_imgproc340.dll;
+ lib/native/windows/x86-64/libopencv_imgcodecs340.dll;
+ lib/native/windows/x86-64/libopencv_highgui340.dll;
  lib/native/windows/x86-64/realsense-gestures-native.dll;
  osname=win32;processor=x86_64,
  lib/native/windows/x86/gccsdw.dll;
