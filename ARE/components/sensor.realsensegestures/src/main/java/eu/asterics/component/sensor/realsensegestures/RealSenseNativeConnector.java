@@ -1,5 +1,6 @@
 package eu.asterics.component.sensor.realsensegestures;
 
+import eu.asterics.component.sensor.realsensegestures.helpers.RealSenseLibraryResolver;
 import eu.asterics.mw.data.ConversionUtils;
 import eu.asterics.mw.model.runtime.IRuntimeOutputPort;
 import eu.asterics.mw.model.runtime.impl.DefaultRuntimeInputPort;
@@ -21,18 +22,32 @@ public class RealSenseNativeConnector {
 
     private RealSenseNativeConnectorThread work_thread;
 
-    static String[] native_libs =
-            {"libgcc_s_seh-1", "libstdc++-6", "libopencv_core340", "libopencv_imgproc340", "libopencv_imgcodecs340", "libopencv_highgui340", "realsense2", "realsense-gestures-native"};
+    //static String[] native_libs =
+    //        {"libgcc_s_seh-1", "libstdc++-6", "libopencv_core340", "libopencv_imgproc340", "libopencv_imgcodecs340", "libopencv_highgui340", "realsense2", "realsense-gestures-native"};
+
+    private RealSenseLibraryResolver libResolver;
 
     public RealSenseNativeConnector(RealSenseGesturesInstance parent){
         // Assign the finger output port
         this.parent = parent;
         // Load native libs
-        for(String lib : native_libs){
+        libResolver = new RealSenseLibraryResolver();
+        libResolver.addLibrary("gcc_s_seh-1", RealSenseLibraryResolver.OsType.WINDOWS);
+        libResolver.addLibrary("stdc++-6", RealSenseLibraryResolver.OsType.WINDOWS);
+        libResolver.addLibrary("opencv_core", RealSenseLibraryResolver.OsType.BOTH, "340");
+        libResolver.addLibrary("opencv_imgproc", RealSenseLibraryResolver.OsType.BOTH, "340");
+        libResolver.addLibrary("opencv_imgcodecs", RealSenseLibraryResolver.OsType.BOTH, "340");
+        libResolver.addLibrary("opencv_highgui", RealSenseLibraryResolver.OsType.BOTH, "340");
+        libResolver.addLibrary("realsense2", RealSenseLibraryResolver.OsType.BOTH);
+        libResolver.addLibrary("realsense-gestures-native", RealSenseLibraryResolver.OsType.BOTH);
+
+        libResolver.loadAllLibraries();
+
+        /*for(String lib : native_libs){
             System.out.println("[RealSenseGestures] Load library " + lib);
             System.loadLibrary(lib);
         }
-        System.out.println("[RealSenseGestures] All libraries loaded!");
+        System.out.println("[RealSenseGestures] All libraries loaded!");*/
     }
 
     // Callback called from C++ code when extended finger numbers change
