@@ -32,13 +32,14 @@ public class RealSenseNativeConnector {
         this.parent = parent;
         // Load native libs
         libResolver = new RealSenseLibraryResolver();
+        libResolver.addLibrary("winpthread-1", RealSenseLibraryResolver.OsType.WINDOWS);
         libResolver.addLibrary("gcc_s_seh-1", RealSenseLibraryResolver.OsType.WINDOWS);
         libResolver.addLibrary("stdc++-6", RealSenseLibraryResolver.OsType.WINDOWS);
         libResolver.addLibrary("opencv_core", RealSenseLibraryResolver.OsType.BOTH, "340");
         libResolver.addLibrary("opencv_imgproc", RealSenseLibraryResolver.OsType.BOTH, "340");
         libResolver.addLibrary("opencv_imgcodecs", RealSenseLibraryResolver.OsType.BOTH, "340");
         libResolver.addLibrary("opencv_highgui", RealSenseLibraryResolver.OsType.BOTH, "340");
-        libResolver.addLibrary("realsense2", RealSenseLibraryResolver.OsType.BOTH);
+        libResolver.addLibrary("realsense2", RealSenseLibraryResolver.OsType.BOTH, "", "");
         libResolver.addLibrary("realsense-gestures-native", RealSenseLibraryResolver.OsType.BOTH);
 
         libResolver.loadAllLibraries();

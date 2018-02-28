@@ -15,6 +15,7 @@ public class RealSenseLibraryResolver {
         OsType os;
         String libraryName;
         String windowsAppend = "";
+        String windowsPrepend = "lib";
 
         public LibraryEntry(String libraryName, OsType os) {
             this.os = os; this.libraryName = libraryName;
@@ -22,9 +23,13 @@ public class RealSenseLibraryResolver {
         public LibraryEntry(String libraryName, OsType os, String windowsAppend) {
             this.os = os; this.libraryName = libraryName; this.windowsAppend = windowsAppend;
         }
+        public LibraryEntry(String libraryName, OsType os, String windowsAppend, String windowsPrepend) {
+            this.os = os; this.libraryName = libraryName; this.windowsAppend = windowsAppend;
+            this.windowsPrepend = windowsPrepend;
+        }
 
         public String getWindowsLibraryName() {
-            return "lib" + libraryName + this.windowsAppend;
+            return this.windowsPrepend + libraryName + this.windowsAppend;
         }
         public String getLinuxLibraryName() {
             return libraryName;
@@ -51,6 +56,9 @@ public class RealSenseLibraryResolver {
     }
     public void addLibrary(String libraryName, OsType os, String windowsAppend) {
         libraries.add(new LibraryEntry(libraryName, os, windowsAppend));
+    }
+    public void addLibrary(String libraryName, OsType os, String windowsAppend, String windowsPrepend) {
+        libraries.add(new LibraryEntry(libraryName, os, windowsAppend, windowsPrepend));
     }
 
     public void loadAllLibraries() {
