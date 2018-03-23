@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<link rel="stylesheet" type="text/css" href="../../stylesheet/help.css" media="screen" />
+<Title>RealSenseGestures</Title>
+</HEAD>
+<BODY>
+<H1>RealSenseGestures</H1> 
+<H3>Component Type: Sensor (Subcategory: Computer Vision) <p><strong>OS: >= Windows 8.1, 64 bit or Ubuntu 16.04 (or derivative), 64-Bit</strong></H3>
+<h4>Requires AsTeRICS to run in a 64-Bit Java Virtual Machine</h4>
+<p>
+This component connects to the Intel Real Sense SR300 and D400 series 3D cameras and provides simple hand gesture recognition functionality. More specifically, only the amount of extended fingers on one hand is tracked.
+This opens up some interesting possibilities like entering a number or clicking using a fist. To give an idea of how well these use cases work, demos have been included
+in the <i>bin/ACS/models/useCaseDemos/realSenseGestures</i> folder.
+<p>
+</p>
+<H2>Requirements</H2>
+You need either an <a href="https://software.intel.com/de-de/realsense/sr300camera">Intel Real Sense SR300</a> camera or a D400 series camera plugged in and configured.
+<p>
+	While Windows should install the drivers for these cameras automatically, there might be other dependencies missing to successfully run the plug-in. For this reason, it is 
+recommended to install the approriate Intel RealSense Depth Manager Tool for your particular camera model.
+</p>
+<p>
+	On Linux, additional configuration of the kernel's webcam driver (uvcvideo) is required. For more information and a guide, refer to the
+	<a href="https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md">appropriate librealsense wiki page on GitHub.</a> 
+</p>
+
+<div style="background: lightyellow; padding: 10px; border: 2px solid black;">
+<b>Note: Intel RealSense cameras can be finnicky as to what computers and software configurations they support. It is recommended to make sure the USB port the camera
+is plugged into provides plenty of power. Furthermore, the plugin might fail to connect if the camera's firmware version is too low. If errors occur, troubleshooting
+these issues via Google is your best bet, as many other people have encountered such problems. You can make sure the camera works by opening the Intel RealSense Viewer Tool and
+enabling the various video streams..</b>
+</div>
+<div class="image"><img src="img/realsense_f200_camera.jpg" alt="Intel Real Sense 3D camera" title="Intel Real Sense F200 (SR300) camera" /><br>
+Intel Real Sense F200 (SR300) camera</div>
+<H2>Output Port Description</H2>
+<ul>
+<li><STRONG>fingers_extended [integer]:</STRONG> The number of fingers extended on a single hand, ranging from 0 to 5.</li>
+<li><STRONG>detected [boolean]:</STRONG><b> Not yet implemented - </b>If the camera is currently detecting a hand.</li>
+</ul>
+<H2>Event Trigger Description</H2>
+This plugin does not trigger any events.
+<H2>Properties</H2>
+This plugin does not feature any configurable properties.
+</ul>
+
+</BODY>
+</HTML>
